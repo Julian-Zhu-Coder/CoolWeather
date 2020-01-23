@@ -3,12 +3,18 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
+    <ImageView
+        android:id="@+id/bing_pic_img"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <ScrollView
         android:id="@+id/weather_layout"
         android:scrollbars="none"
         android:overScrollMode="never"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
 
         <LinearLayout
             android:orientation="vertical"
@@ -20,7 +26,7 @@
             <include layout="@layout/now" />
 
             <include layout="@layout/forecast" />
-
+            <include layout="@layout/forecast_item" />
             <include layout="@layout/aqi" />
 
             <include layout="@layout/suggestion" />
